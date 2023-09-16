@@ -106,6 +106,15 @@
             </div>
           </div>
         </div>
+        <div class="container-fluid">
+          <div class="row row mt-3 justify-content-center">
+            <div class="col col-sm-5">
+              <p id="pernama"></p>
+              <p id="perumur"></p>
+              <p id="peruang"></p>
+            </div>
+          </div>
+        </div>
       </div>
       <div
         class="tab-pane fade"
@@ -279,8 +288,12 @@
           node.appendChild(nodeumur);
           node.appendChild(nodeuangsk);
 
-          tabeldata.appendChild(node);
-          this.rerata();
+          setTimeout(() => {
+            tabeldata.appendChild(node);
+          }, 3000);
+          setTimeout(() => {
+            this.rerata();
+          }, 4000);
         }
 
         rerata() {
@@ -304,8 +317,39 @@
           hasilrerata.innerHTML = `Rata rata pendaftar memiliki uang saku sebesar ${reratauang} dengan rata rata umur ${rerataumur}`;
         }
       }
-
       const proses = new prosesData();
+
+      let pernama = document.getElementById("pernama");
+      let perumur = document.getElementById("perumur");
+      let peruang = document.getElementById("peruang");
+      let button = document.getElementById("submit");
+      const input = (info) => {
+        return new Promise((resolve, reject) => {
+          resolve("&#8226;"+ " Data " + info + " berhasil terinput");
+        });
+      };
+
+      let nama = "nama";
+      let umur = "umur";
+      let uang = "uang";
+      Promise.all([input(nama), input(umur), input(uang)]).then((result) => {
+        button.addEventListener("click", function () {
+          setTimeout(() => {
+            pernama.innerHTML = "<span style='color: green;'>" + result[0] + "</span>";           
+          }, 1000);
+          setTimeout(() => {
+            perumur.innerHTML = "<span style='color: green;'>" + result[1] + "</span>";           
+          }, 2000);
+          setTimeout(() => {
+            peruang.innerHTML = "<span style='color: green;'>" + result[2] + "</span>";           
+          }, 3000);
+          setTimeout(() => {
+            pernama.innerHTML = "";
+            perumur.innerHTML = "";
+            peruang.innerHTML = "";
+          }, 6000);
+        });
+      });
     </script>
   </body>
 </html>

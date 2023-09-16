@@ -16,3 +16,8 @@ Catatan:
 - Imajinasikan dan coba terapkan salah satu konsep OOP dan Asynchronous dalam menyelesaikan masalah tersebut.
 - Push ke REPO dan upload link REPO, tolong repo dalam status public.
 - Gunakan framework CSS untuk membuat tampilan lebih menarik.
+
+
+
+## kode JS
+# class 

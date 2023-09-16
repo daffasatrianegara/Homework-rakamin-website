@@ -1,0 +1,37 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .nav .nav-item .nav-link {
+  color: white;
+  background-color: black;
+}
+
+.navbar .nav .nav-item .nav-link:hover {
+  color: black;
+  background-color: white;
+}
+
+.navbar .nav .nav-item .active {
+  color: black;
+  background-color: white;
+}
+
+.row .col .btn-dark {
+  color: white;
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.row .col .btn-dark:hover {
+  background-color: rgb(65, 65, 65) !important;
+}
+
+.alert {
+  margin: 0;
+  padding: 0;
+}
+tr th {
+  font-weight: normal !important;
+}
